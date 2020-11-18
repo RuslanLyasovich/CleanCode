@@ -19,18 +19,15 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMS() {
-        return maxSpeed;
-    }
+    public int getMaxSpeed() { return maxSpeed;} // Изменил наименование метода на полное
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
-    }
+    } // Изменил  наименование метода в соотвествии с конвенцией
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
-    }
+    public int getMinLoadCapacity() { // тут странное наименование метода, наверное.  необходимо изменить название, но я не уверен
+                return maxLoadCapacity;} // Сократил код на 2 строчки!
+
 
     @Override
     public String toString() {

@@ -49,18 +49,18 @@ public class AirportTest {
 
     @Test
     public void testGetPassengerPlaneWithMaxCapacity() {
-        System.out.println("TEST testGetPassengerPlaneWithMaxCapacity started!");
+        // Удалил ненужную строку soup
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
         Assert.assertTrue(expectedPlaneWithMaxPassengersCapacity.equals(planeWithMaxPassengerCapacity));
     }
 
+    // Я понимаю, что тесты с утверждением Assert необходимо сократить и булеаны отдельно объявлять не нужно, но пока не понимаю, как это сделать правильно, читаю об этом
     @Test
-    public void test3() {
+    public void test3() { // Неверное наименование теста
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
-
         boolean nextPlaneMaxLoadCapacityIsHigherThanCurrent = true;
         for (int i = 0; i < planesSortedByMaxLoadCapacity.size() - 1; i++) {
             Plane currentPlane = planesSortedByMaxLoadCapacity.get(i);
@@ -77,16 +77,16 @@ public class AirportTest {
     public void testHasAtLeastOneBomberInMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
-        boolean flag = false;
+        boolean flag = false; // имя переменной флаг выбрано неудачно, да и не нужна она вообще
         for (MilitaryPlane militaryPlane : bomberMilitaryPlanes) {
             if ((militaryPlane.getType() == MilitaryType.BOMBER)) {
                 flag = true;
             }
             else {
-                Assert.fail("Test failed!");
+                Assert.fail(); // удалил строковый вывод
             }
         }
-        // if not failed
+       // удалил ненужный коментарий
     }
 
     @Test
