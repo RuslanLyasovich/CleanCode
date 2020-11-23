@@ -49,7 +49,6 @@ public class AirportTest {
 
     @Test
     public void testGetPassengerPlaneWithMaxCapacity() {
-        // Удалил ненужную строку soup
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
         Assert.assertTrue(expectedPlaneWithMaxPassengersCapacity.equals(planeWithMaxPassengerCapacity));
@@ -57,7 +56,7 @@ public class AirportTest {
 
     // Я понимаю, что тесты с утверждением Assert необходимо сократить и булеаны отдельно объявлять не нужно, но пока не понимаю, как это сделать правильно, читаю об этом
     @Test
-    public void test3() { // Неверное наименование теста
+    public void test() {
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
@@ -83,10 +82,9 @@ public class AirportTest {
                 flag = true;
             }
             else {
-                Assert.fail(); // удалил строковый вывод
+                Assert.fail();
             }
         }
-       // удалил ненужный коментарий
     }
 
     @Test

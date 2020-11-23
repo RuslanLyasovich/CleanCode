@@ -1,4 +1,6 @@
-import Planes.experimentalPlane;
+package plane
+
+import planes.experimentalPlane;
 import models.MilitaryType;
 import Planes.MilitaryPlane;
 import Planes.PassengerPlane;
@@ -12,7 +14,6 @@ import java.util.*;
 
 public class Airport {
     private List<? extends Plane> planes;
-
 
 
     public List<PassengerPlane> getPasPl() {
@@ -43,12 +44,6 @@ public class Airport {
                 planeWithMaxCapacity = passengerPlanes.get(i);
             }
         }
-
-
-
-
-
-
         return planeWithMaxCapacity;
     }
 
@@ -97,7 +92,6 @@ public class Airport {
     }
 
 
-    // Удалил ненужный комментарий
     public Airport sortByMaxSpeed() {
         Collections.sort(planes, new Comparator<Plane>() {
             public int compare(Plane o1, Plane o2) {

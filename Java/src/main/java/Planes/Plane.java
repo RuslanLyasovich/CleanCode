@@ -1,8 +1,8 @@
-package Planes;
+package planes;
 
 import java.util.Objects;
 
-abstract public class Plane {
+public class Plane {
     String model;
     private int maxSpeed;
     private int maxFlightDistance;
@@ -19,14 +19,17 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMaxSpeed() { return maxSpeed;} // Изменил наименование метода на полное
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
 
     public int getMaxFlightDistance() {
         return maxFlightDistance;
-    } // Изменил  наименование метода в соотвествии с конвенцией
+    }
 
-    public int getMinLoadCapacity() { // тут странное наименование метода, наверное.  необходимо изменить название, но я не уверен
-                return maxLoadCapacity;} // Сократил код на 2 строчки!
+    public int getMinLoadCapacity() {
+                return maxLoadCapacity;
+    }
 
 
     @Override
